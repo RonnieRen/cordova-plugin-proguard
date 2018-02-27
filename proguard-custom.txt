@@ -137,5 +137,8 @@
 -dontwarn org.apache.commons.**
 
 
+-keep public class org.apache.cordova.** { public protected *;}
+
+
 
 
