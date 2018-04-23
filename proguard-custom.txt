@@ -133,12 +133,35 @@
 -keep class org.crosswalk.engine.** { *;}
 -keep class org.chromium.** { *;}
 -dontwarn org.chromium.**
--keep public class org.apache.commons.** {*;}
+-dontnote org.chromium.**
+
+-keep,includedescriptorclasses public class org.apache.commons.** {*;}
 -dontwarn org.apache.commons.**
 
 
 -keep public class org.apache.cordova.** { public protected *;}
+-keep public class com.squareup.okhttp3.** {public protected *;}
 
+-dontwarn okhttp3.**
+-keep,includedescriptorclasses public class okhttp3.** {*;}
+-dontnote okhttp3.**
 
+-keep class javax.annotation.** { *;}
+-dontwarn javax.annotation.**
 
+-dontwarn org.codehaus.**
+-keep class org.codehaus.** {*;}
 
+-keep class org.conscrypt.** {*;}
+-keep,includedescriptorclasses public class com.google.gson.** {public protected *;}
+-dontnote com.google.gson.**
+
+-dontnote android.net.http.*
+-dontnote org.apache.commons.codec.**
+-dontnote org.apache.http.**
+-dontnote org.apache.commons.logging.**
+
+-dontnote android.os.**
+-dontnote cn.jpush.**
+-dontnote cn.jiguang.**
+-dontnote android.telephony.**
